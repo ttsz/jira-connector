@@ -38,7 +38,8 @@ function DashboardClient(jiraClient) {
             qs: {
                 filter: opts.filter,
                 startAt: opts.startAt,
-                maxResults: opts.maxResults
+                maxResults: opts.maxResults,
+                fields: opts.fields | '*all'
             }
         };
 
@@ -64,7 +65,8 @@ function DashboardClient(jiraClient) {
             qs: {
                 filter: opts.filter,
                 startAt: opts.startAt,
-                maxResults: opts.maxResults
+                maxResults: opts.maxResults,
+                fields: opts.fields | '*all'
             }
         };
 

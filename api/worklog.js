@@ -30,7 +30,8 @@ function WorklogClient(jiraClient) {
             json: true,
             followAllRedirects: true,
             qs: {
-                since: opts.since
+                since: opts.since,
+                fields: opts.fields | '*all'
             }
         };
         return this.jiraClient.makeRequest(options, callback)
@@ -79,7 +80,8 @@ function WorklogClient(jiraClient) {
             json: true,
             followAllRedirects: true,
             qs: {
-                since: opts.since
+                since: opts.since,
+                fields: opts.fields | '*all'
             }
         };
         return this.jiraClient.makeRequest(options, callback)

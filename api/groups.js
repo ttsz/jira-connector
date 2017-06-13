@@ -36,7 +36,8 @@ function GroupsClient(jiraClient) {
             qs: {
                 query: opts.query,
                 exclude: opts.exclude,
-                maxResults: opts.maxResults
+                maxResults: opts.maxResults,
+                fields: opts.fields | '*all'
             }
         };
 

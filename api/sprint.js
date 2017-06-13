@@ -51,7 +51,8 @@ function AgileSprintClient(jiraClient) {
       qs: {
         filter: opts.filter,
         startAt: opts.startAt,
-        maxResults: opts.maxResults
+        maxResults: opts.maxResults,
+        fields: opts.fields | '*all'
       }
     };
 
@@ -129,7 +130,8 @@ function AgileSprintClient(jiraClient) {
       qs: {
         filter: opts.filter,
         startAt: opts.startAt,
-        maxResults: opts.maxResults
+        maxResults: opts.maxResults,
+        fields: opts.fields | '*all'
       }
     };
 
@@ -161,7 +163,7 @@ function AgileSprintClient(jiraClient) {
         maxResults: opts.maxResults,
         jql: opts.jql,
         validateQuery: opts.validateQuery,
-        fields: opts.fields,
+        fields: opts.fields | '*all',
         expand: opts.expand
       }
     };
