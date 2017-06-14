@@ -42,7 +42,7 @@ function IssueClient(jiraClient) {
                 filter: opts.filter,
                 startAt: opts.startAt,
                 maxResults: opts.maxResults,
-                fields: opts.fields | '*all'
+                fields: opts.fields || '*all'
             }
         };
 
@@ -81,7 +81,7 @@ function IssueClient(jiraClient) {
             },
             qs: {
               boardId: opts.boardId,
-              fields: opts.fields | '*all'
+              fields: opts.fields || '*all'
             }
         };
 
@@ -187,7 +187,7 @@ function IssueClient(jiraClient) {
                 issuetypeIds: opts.issuetypeIds,
                 issuetypeNames: opts.issuetypeNames,
                 expand: opts.expand,
-                fields: opts.fields | '*all'
+                fields: opts.fields || '*all'
             }
         };
 
@@ -274,7 +274,7 @@ function IssueClient(jiraClient) {
                     startAt: opts.startAt,
                     maxResults: opts.maxResults,
                     expand: opts.expand,
-                    fields: opts.fields | '*all'
+                    fields: opts.fields || '*all'
                 }
             };
         }

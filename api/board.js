@@ -37,7 +37,7 @@ function AgileBoardClient(jiraClient) {
         type: opts.type,
         startAt: opts.startAt,
         maxResults: opts.maxResults,
-        fields: opts.fields | '*all'
+        fields: opts.fields || '*all'
       }
     };
 
@@ -64,7 +64,7 @@ function AgileBoardClient(jiraClient) {
         filter: opts.filter,
         startAt: opts.startAt,
         maxResults: opts.maxResults,
-        fields: opts.fields | '*all'
+        fields: opts.fields || '*all'
       }
     };
 
@@ -98,10 +98,9 @@ function AgileBoardClient(jiraClient) {
       qs: {
         startAt: opts.startAt,
         maxResults: opts.maxResults,
-        fields: opts.fields | '*all'
+        fields: opts.fields || '*all'
       }
     };
-
       return this.jiraClient.makeRequest(options, callback);
   };
 
@@ -131,7 +130,7 @@ function AgileBoardClient(jiraClient) {
       qs: {
         startAt: opts.startAt,
         maxResults: opts.maxResults,
-        fields: opts.fields | '*all'
+        fields: opts.fields || '*all'
       }
     };
 

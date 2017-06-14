@@ -52,7 +52,7 @@ function GroupClient(jiraClient) {
     this.getGroup = function (opts, callback) {
         var qs = {
             groupname: opts.groupName,
-            fields: opts.fields | '*all'
+            fields: opts.fields || '*all'
         };
 
         if (opts.expand) {

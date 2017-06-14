@@ -39,7 +39,7 @@ function DashboardClient(jiraClient) {
                 filter: opts.filter,
                 startAt: opts.startAt,
                 maxResults: opts.maxResults,
-                fields: opts.fields | '*all'
+                fields: opts.fields || '*all'
             }
         };
 

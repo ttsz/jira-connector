@@ -47,7 +47,7 @@ function GroupUserPickerClient(jiraClient) {
                 fieldId: opts.fieldId,
                 projectId: opts.projectId,
                 issueTypeId: opts.issueTypeId,
-                fields: opts.fields | '*all'
+                fields: opts.fields || '*all'
             }
         };
 
